@@ -33,8 +33,8 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 			float xExpected = 0.5f * SQRT_3 * hexRadius;
 			float yExpected = 0.5f * hexRadius;
 			
-			Assert.That( slice.x, Is.InRange<float>( xExpected - EPSILON, xExpected + EPSILON ) );
-			Assert.That( slice.y, Is.InRange<float>( yExpected - EPSILON, yExpected + EPSILON ) );
+			Assert.That( slice.x, Is.InRange( xExpected - EPSILON, xExpected + EPSILON ) );
+			Assert.That( slice.y, Is.InRange( yExpected - EPSILON, yExpected + EPSILON ) );
 		}
 
 		#endregion
@@ -63,8 +63,8 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 			float xExpected = hexRadius * SQRT_3 * ( 10 + 10 / 2 );
 			float yExpected = hexRadius * ( 3f / 2f ) * 10;
 			
-			Assert.That( point.x, Is.InRange<float>( xExpected - EPSILON, xExpected + EPSILON ) );
-			Assert.That( point.y, Is.InRange<float>( yExpected - EPSILON, yExpected + EPSILON ) );
+			Assert.That( point.x, Is.InRange( xExpected - EPSILON, xExpected + EPSILON ) );
+			Assert.That( point.y, Is.InRange( yExpected - EPSILON, yExpected + EPSILON ) );
 		}
 
 		[Test]
@@ -78,16 +78,16 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 			float xExpected = hexRadius * SQRT_3 * 10;
 			float yExpected = hexRadius * ( 3f / 2f ) * 10;
 			
-			Assert.That( point.x, Is.InRange<float>( xExpected - EPSILON, xExpected + EPSILON ) );
-			Assert.That( point.y, Is.InRange<float>( yExpected - EPSILON, yExpected + EPSILON ) );
+			Assert.That( point.x, Is.InRange( xExpected - EPSILON, xExpected + EPSILON ) );
+			Assert.That( point.y, Is.InRange( yExpected - EPSILON, yExpected + EPSILON ) );
 
 			// Text an odd row hex
 			point = grid.OffsetToPoint( new OffsetHexCoord( 10, 11 ) );
 			xExpected = hexRadius * SQRT_3 * ( 10 + 0.5f );
 			yExpected = hexRadius * ( 3f / 2f ) * 11;
 			
-			Assert.That( point.x, Is.InRange<float>( xExpected - EPSILON, xExpected + EPSILON ) );
-			Assert.That( point.y, Is.InRange<float>( yExpected - EPSILON, yExpected + EPSILON ) );
+			Assert.That( point.x, Is.InRange( xExpected - EPSILON, xExpected + EPSILON ) );
+			Assert.That( point.y, Is.InRange( yExpected - EPSILON, yExpected + EPSILON ) );
 		}
 
 		[Test]

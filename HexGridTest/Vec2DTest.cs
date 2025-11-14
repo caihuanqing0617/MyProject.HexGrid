@@ -41,8 +41,8 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		{
 			Vec2D point = new Vec2D( 1f, 2f ) + new Vec2D( 3f, 4f );
 
-			Assert.That( point.x, Is.InRange<float>( 4f - EPSILON, 4f + EPSILON ) );
-			Assert.That( point.y, Is.InRange<float>( 6f - EPSILON, 6f + EPSILON ) );
+			Assert.That( point.x, Is.InRange( 4f - EPSILON, 4f + EPSILON ) );
+			Assert.That( point.y, Is.InRange( 6f - EPSILON, 6f + EPSILON ) );
 		}
 
 		[Test]
@@ -50,8 +50,8 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		{
 			Vec2D point = new Vec2D( 4f, 3f ) - new Vec2D( 1f, 2f );
 
-			Assert.That( point.x, Is.InRange<float>( 3f - EPSILON, 3f + EPSILON ) );
-			Assert.That( point.y, Is.InRange<float>( 1f - EPSILON, 1f + EPSILON ) );
+			Assert.That( point.x, Is.InRange( 3f - EPSILON, 3f + EPSILON ) );
+			Assert.That( point.y, Is.InRange( 1f - EPSILON, 1f + EPSILON ) );
 		}
 
 		#endregion
@@ -68,7 +68,7 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 			float length = point1.Distance( point2 );
 			float expected = (float)( 2 * Math.Sqrt( 2 ) );
 			
-			Assert.That( length, Is.InRange<float>( expected - EPSILON, expected + EPSILON ) );
+			Assert.That( length, Is.InRange( expected - EPSILON, expected + EPSILON ) );
 		}
 
 		[Test]
@@ -79,7 +79,7 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 			float length = point.Length();
 			float expected = (float)( 2 * Math.Sqrt( 2 ) );
 			
-			Assert.That( length, Is.InRange<float>( expected - EPSILON, expected + EPSILON ) );
+			Assert.That( length, Is.InRange( expected - EPSILON, expected + EPSILON ) );
 		}
 
 		#endregion

@@ -1,5 +1,4 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using ca.axoninteractive.Geometry.Hex;
 
 namespace ca.axoninteractive.Geometry.HexGridTest
@@ -18,8 +17,8 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 			AxialHexCoord axial = new AxialHexCoord( 1, 2 );
 			FloatAxial floatAxial = new FloatAxial( axial );
 			
-			Assert.That( floatAxial.q, Is.InRange<float>( 1f - EPSILON, 1f + EPSILON ) );
-			Assert.That( floatAxial.r, Is.InRange<float>( 2f - EPSILON, 2f + EPSILON ) );
+			Assert.That( floatAxial.q, Is.InRange( 1f - EPSILON, 1f + EPSILON ) );
+			Assert.That( floatAxial.r, Is.InRange( 2f - EPSILON, 2f + EPSILON ) );
 		}
 
 		[Test]
@@ -49,9 +48,9 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		{
 			FloatCubic floatCubic = new FloatAxial( 1f, 2f ).ToFloatCubic();
 
-			Assert.That( floatCubic.x, Is.InRange<float>(  1f - EPSILON,  1f + EPSILON ) );
-			Assert.That( floatCubic.y, Is.InRange<float>( -3f - EPSILON, -3f + EPSILON ) );
-			Assert.That( floatCubic.z, Is.InRange<float>(  2f - EPSILON,  2f + EPSILON ) );
+			Assert.That( floatCubic.x, Is.InRange(  1f - EPSILON,  1f + EPSILON ) );
+			Assert.That( floatCubic.y, Is.InRange( -3f - EPSILON, -3f + EPSILON ) );
+			Assert.That( floatCubic.z, Is.InRange(  2f - EPSILON,  2f + EPSILON ) );
 		}
 
 		#endregion
